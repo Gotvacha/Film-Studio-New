@@ -49,6 +49,11 @@
             <artifactId>guava</artifactId>
             <version>30.1-jre</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-customsearch</artifactId>
+            <version>v1-rev57-1.23.0</version>
+        </dependency>
     </dependencies>
 
     <build>

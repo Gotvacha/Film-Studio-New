@@ -28,8 +28,7 @@ public class InsertFilmFunction {
             e.printStackTrace();
         }
 
-        context.getLogger().info("Printing request body:");
-        context.getLogger().info(requestBody);
+        context.getLogger().info("Printing request body:" + requestBody);
         String[] formData = requestBody.split("&");
 
         String title = formData[0].split("=")[1];
@@ -50,7 +49,7 @@ public class InsertFilmFunction {
             return request.createResponseBuilder(HttpStatus.BAD_REQUEST).body("Invalid year format.").build();
         }
 
-        String connectionString = "jdbc:postgresql://filmstudioserver.postgres.database.azure.com:5432/postgres?user=postgresqladmin&password=mrazqazureBS69&sslmode=require";
+        String connectionString = "jdbc:postgresql://filmstudioserver.postgres.database.azure.com/filmbase?user=filmsadmin&password=123456-Aa&sslmode=require";
 
         try (Connection connection = DriverManager.getConnection(connectionString)) {
             String sql = "INSERT INTO Films (title, year, genre, description, director, actors) VALUES (?, ?, ?, ?, ?, ?)";

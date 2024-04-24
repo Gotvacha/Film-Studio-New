@@ -27,8 +27,7 @@ public class SearchFilmFunction {
             e.printStackTrace();
         }
         
-        context.getLogger().info("Printing request body:");
-        context.getLogger().info(requestBody);
+        context.getLogger().info("Printing request body:" + requestBody);
 
         String selectFilmSql = "SELECT * FROM Films";
         String searchString = null;
@@ -38,7 +37,7 @@ public class SearchFilmFunction {
             selectFilmSql = "SELECT * FROM Films WHERE title LIKE ?";
         }
 
-        String connectionString = "jdbc:postgresql://filmstudioserver.postgres.database.azure.com:5432/postgres?user=postgresqladmin&password=mrazqazureBS69&sslmode=require";
+        String connectionString = "jdbc:postgresql://filmstudioserver.postgres.database.azure.com/filmbase?user=filmsadmin&password=123456-Aa&sslmode=require";
 
         try (Connection connection = DriverManager.getConnection(connectionString)) {
             try (PreparedStatement selectFilmsStatement = connection.prepareStatement(selectFilmSql)) {
@@ -62,7 +61,7 @@ public class SearchFilmFunction {
 
                     String selectOpinionSql = "SELECT * FROM Reviews WHERE film_id = ?";
                     
-                    responseBuilder.append("Title: ").append(title).append("-\t").append(year).append(", ")
+                    responseBuilder.append("Title: ").append(title).append("-  ").append(year).append(", ")
                         .append(genre).append(", ").append(description).append(", ").append(director).append(", ")
                         .append(actors).append(", ").append(average_rating).append("\n");
 

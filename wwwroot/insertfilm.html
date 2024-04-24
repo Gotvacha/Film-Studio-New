@@ -5,21 +5,23 @@
     <link rel="stylesheet" type="text/css" href="insertionpanelstyle.css">
 </head>
 <body>
-    <h2>Insert Film</h2>
-    <form action="http://localhost:7071/api/InsertFilmFunction" method="post">
-        <label for="title">Title:</label><br>
-        <input type="text" id="title" name="title"><br>
-        <label for="year">Year:</label><br>
-        <input type="number" id="year" name="year" min="1903"><br>
-        <label for="genre">Genre:</label><br>
-        <input type="text" id="genre" name="genre"><br>
-        <label for="description">Description:</label><br>
-        <textarea id="description" name="description"></textarea><br>
-        <label for="director">Director:</label><br>
-        <input type="text" id="director" name="director"><br>
-        <label for="actors">Actors:</label><br>
-        <input type="text" id="actors" name="actors"><br><br>
-        <input type="submit" value="Submit" onclick="this.style.backgroundColor='#45a049';">
-    </form>
+    <div class="hcentered-container">
+        <h2>Insert Film</h2>
+        <form action="https://filmstudio.azurewebsites.net/api/insertfilmfunction" method="post">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title"><br>
+            <label for="year">Year:</label><br>
+            <input type="number" id="year" name="year" min="1903"><br>
+            <label for="genre">Genre:</label><br>
+            <input type="text" id="genre" name="genre"><br>
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description"></textarea><br>
+            <label for="director">Director:</label><br>
+            <input type="text" id="director" name="director"><br>
+            <label for="actors">Actors:</label><br>
+            <input type="text" id="actors" name="actors"><br><br>
+            <input type="submit" value="Submit" onclick="this.style.backgroundColor='#45a049';">
+        </form>
+    </div>
 </body>
 </html>

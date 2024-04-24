@@ -5,19 +5,21 @@
     <link rel="stylesheet" type="text/css" href="insertionpanelstyle.css">
 </head>
 <body>
-    <h2>Insert Review</h2>
-    <form action="http://localhost:7071/api/InsertReviewFunction" method="POST">
-        <label for="filmId">Film ID:</label><br>
-        <input type="text" id="filmId" name="filmId"><br>
-        <label for="title">Title:</label><br>
-        <input type="text" id="title" name="title"><br>
-        <label for="opinion">Opinion:</label><br>
-        <input type="text" id="opinion" name="opinion"><br>
-        <label for="rating">Rating:</label><br>
-        <input type="number" id="rating" name="rating" min="0" max="10"><br>
-        <label for="author">Author:</label><br>
-        <input type="text" id="author" name="author"><br><br>
-        <input type="submit" value="Submit" onclick="this.style.backgroundColor='#45a049';">
-    </form>
+    <div class="hcentered-container">
+        <h2>Insert Review</h2>
+        <form action="https://filmstudio.azurewebsites.net/api/insertreviewfunction" method="post">
+            <label for="filmId">Film ID:</label><br>
+            <input type="text" id="filmId" name="filmId"><br>
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title"><br>
+            <label for="opinion">Opinion:</label><br>
+            <input type="text" id="opinion" name="opinion"><br>
+            <label for="rating">Rating:</label><br>
+            <input type="number" id="rating" name="rating" min="0" max="10"><br>
+            <label for="author">Author:</label><br>
+            <input type="text" id="author" name="author"><br><br>
+            <input type="submit" value="Submit" onclick="this.style.backgroundColor='#45a049';">
+        </form>
+    </div>
 </body>
 </html>

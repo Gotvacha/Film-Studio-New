@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Cover</title>
+    <link rel="stylesheet" type="text/css" href="insertionpanelstyle.css">
+</head>
+<body>
+    <div class="vcentered-container">
+        <div>
+            <h2>Search Movie Cover</h2>
+            <form action="https://filmstudio.azurewebsites.net/api/findmoviecoverfunction" method="post">
+                <label for="title">cover of:</label><br>
+                <input type="text" id="title" name="title"><br><br>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+
+        <div>
+            <h2>Search Movie Soundtrack</h2>
+            <form action= "https://filmstudio.azurewebsites.net/api/searchsoundtrackfunction" method="post">
+                <label for="title">soundtrack of:</label><br>
+                <input type="text" id="title" name="title"><br><br>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+        
+        <div>
+            <h2>Search Movie Thumbnail</h2>
+            <form action= "https://filmstudio.azurewebsites.net/api/findthumbnailfunction" method="post">
+                <label for="title">thumbnails of:</label><br>
+                <input type="text" id="title" name="title"><br><br>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

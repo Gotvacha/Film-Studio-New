@@ -35,8 +35,7 @@ public class InsertReviewFunction {
             context.getLogger().info(String.format("%s: %s", key, value));
         });
 
-        context.getLogger().info("Printing request body:");
-        context.getLogger().info(requestBody);
+        context.getLogger().info("Printing request body:" + requestBody);
 
        String[] formData = requestBody.split("&");
 
@@ -61,7 +60,7 @@ public class InsertReviewFunction {
 
         LocalDate currentDate = LocalDate.now();
 
-        String connectionString = "jdbc:postgresql://filmstudioserver.postgres.database.azure.com:5432/postgres?user=postgresqladmin&password=mrazqazureBS69&sslmode=require";
+        String connectionString = "jdbc:postgresql://filmstudioserver.postgres.database.azure.com/filmbase?user=filmsadmin&password=123456-Aa&sslmode=require";
 
         try (Connection connection = DriverManager.getConnection(connectionString)) {
             String sql = "INSERT INTO Reviews (film_id, title, opinion, rating, datetime, author) VALUES (?, ?, ?, ?, ?, ?)";

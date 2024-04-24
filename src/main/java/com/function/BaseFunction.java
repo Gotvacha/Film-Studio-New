@@ -17,7 +17,7 @@ public class BaseFunction {
 
         context.getLogger().info("Java HTTP trigger processed a request to create table.");
 
-        String connectionString = "jdbc:postgresql://filmstudioserver.postgres.database.azure.com:5432/postgres?user=postgresqladmin&password=mrazqazureBS69&sslmode=require";
+        String connectionString = "jdbc:postgresql://filmstudioserver.postgres.database.azure.com/filmbase?user=filmsadmin&password=123456-Aa&sslmode=require";
         boolean tableCreated = createFilmsTable(connectionString, context) && createReviewsTable(connectionString, context);
 
         if (tableCreated) {

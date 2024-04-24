@@ -14,7 +14,7 @@ public class CalculateAverageRatingFunction {
 
         context.getLogger().info("Java Timer trigger processed a request to calculate average rating.");
 
-        String connectionString = "jdbc:postgresql://filmstudioserver.postgres.database.azure.com:5432/postgres?user=postgresqladmin&password=mrazqazureBS69&sslmode=require";
+        String connectionString = "jdbc:postgresql://filmstudioserver.postgres.database.azure.com/filmbase?user=filmsadmin&password=123456-Aa&sslmode=require";
 
         try (Connection connection = DriverManager.getConnection(connectionString)) {
             String selectSql = "SELECT film_id, AVG(rating) AS average_rating FROM Reviews GROUP BY film_id";
